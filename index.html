@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/vuidokan.jpg" rel="image/vuidokan">
+    <title>List Point Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            display: block;
+            width: 1000px;
+            padding: 10px 20px;
+            margin: 10px auto;
+            font-size: 100px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .name {
+            font-size: 150px;
+        }
+
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="name">List Karate Point Panel</h1>
+        <div class="button" onclick="redirectTo('KATA.html')">KATA</div>
+        <div class="button" onclick="redirectTo('KATA-TEAM.html')">KATA-TEAM</div>
+        <div class="button" onclick="redirectTo('KUMITE.html')">KUMITE</div>
+        <div class="button" onclick="redirectTo('KUMITE-2.html')">KUMITE-2</div>
+        <button class="logout-btn" onclick="logout()">Đăng Xuất</button>
+        <div style="color:black; text-align: center; font-size: 30px;">licenses: CÔNG TY TRÁCH NHIỆM HỮU HẠN PHÁT TRIỂN THỂ THAO VUIDOKAN</div>
+    </div>
+
+    <script>
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        function checkLoginStatus() {
+            if (!localStorage.getItem('loggedIn')) {
+                window.location.href = 'login.html';
+            }
+        }
+
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'login.html';
+        }
+
+        checkLoginStatus()
+    </script>
+</body>
+
+</html>
