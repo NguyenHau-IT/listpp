@@ -267,8 +267,8 @@
                 <th><button type="button" class="chui" id="C2_2" onclick="chui2(this, C2_2)">C2</button></th>
                 <th><button type="button" class="chui" id="C3_2" onclick="chui2(this, C3_2)">C3</button></th>
                 <th><button type="button" class="chui" id="HC_2" onclick="chui2(this, HC_2)">HC</button></th>
-                <th><button type="button" class="chui" onclick="H22(this);">H</button></th>
-                <th colspan="2" style="color: #fff; font-size: 270px">VS</th>
+                <th><button type="button" class="chui" onclick="H2(this);">H</button></th>
+                <th colspan="2" style="color: #fff; font-size: 295px">VS</th>
                 <th><button type="button" class="chui" id="C1_1" onclick="chui1(this, C1_1)">C1</button></th>
                 <th><button type="button" class="chui" id="C2_1" onclick="chui1(this, C2_1)">C2</button></th>
                 <th><button type="button" class="chui" id="C3_1" onclick="chui1(this, C3_1)">C3</button></th>
@@ -284,8 +284,7 @@
                 <th class="count2" id="clickCount2_3">0 IPPON</th>
                 <th class="count2" id="clickCount2_2">0 WAZA</th>
                 <th id="win2">0 AO</th>
-                <th colspan="4" style="font-size: 385px; color: #fff" id="countdown">01:30<span id="tenths">.0</span>
-                </th>
+                <th colspan="4" style="font-size: 400px; color: #fff" id="countdown">01:30<span id="tenths">.0</span></th>
                 <th id="win1">0 AKA</th>
                 <th class="count1" id="clickCount1_2">0 WAZA</th>
                 <th class="count1" id="clickCount1_3">0 IPPON</th>
@@ -793,7 +792,7 @@
             isClicked1 = !isClicked1;
         }
 
-        function H22(button) {
+        function H2(button) {
             if (!isClicked2) {
                 button.classList.add('clicked2');
                 chui2(button, HC_2);
