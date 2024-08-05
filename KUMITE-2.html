@@ -10,7 +10,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="image/vuidokan.jpg" rel="image/vuidokan">
     <title>KARATE SCORE BOARD:KUMITE 2</title>
     <style>
         .chui {
@@ -238,7 +237,7 @@
 
 <body style=" height: 100%; width: 99%; background-color: #000">
 
-    <table >
+    <table>
 
         <table style="width: 100%; height: 50%;">
 
@@ -697,26 +696,25 @@
 
         function chui1(button, id) {
             if (!isClicked) {
-                switch (id)
-                {
+                switch (id) {
                     case C1_1:
-                    C1_1.classList.add('clicked1');
-                    break;
+                        C1_1.classList.add('clicked1');
+                        break;
                     case C2_1:
-                    C1_1.classList.add('clicked1');
-                    C2_1.classList.add('clicked1');
-                    break;
+                        C1_1.classList.add('clicked1');
+                        C2_1.classList.add('clicked1');
+                        break;
                     case C3_1:
-                    C1_1.classList.add('clicked1');
-                    C2_1.classList.add('clicked1');
-                    C3_1.classList.add('clicked1');
-                    break;
+                        C1_1.classList.add('clicked1');
+                        C2_1.classList.add('clicked1');
+                        C3_1.classList.add('clicked1');
+                        break;
                     case HC_1:
-                    C1_1.classList.add('clicked1');
-                    C2_1.classList.add('clicked1');
-                    C3_1.classList.add('clicked1');
-                    HC_1.classList.add('clicked1');
-                    break;
+                        C1_1.classList.add('clicked1');
+                        C2_1.classList.add('clicked1');
+                        C3_1.classList.add('clicked1');
+                        HC_1.classList.add('clicked1');
+                        break;
                 }
             } else {
                 button.classList.remove('clicked1');
@@ -726,26 +724,25 @@
 
         function chui2(button, id) {
             if (!isClicked) {
-                switch (id)
-                {
+                switch (id) {
                     case C1_2:
-                    C1_2.classList.add('clicked2');
-                    break;
+                        C1_2.classList.add('clicked2');
+                        break;
                     case C2_2:
-                    C1_2.classList.add('clicked2');
-                    C2_2.classList.add('clicked2');
-                    break;
+                        C1_2.classList.add('clicked2');
+                        C2_2.classList.add('clicked2');
+                        break;
                     case C3_2:
-                    C1_2.classList.add('clicked2');
-                    C2_2.classList.add('clicked2');
-                    C3_2.classList.add('clicked2');
-                    break;
+                        C1_2.classList.add('clicked2');
+                        C2_2.classList.add('clicked2');
+                        C3_2.classList.add('clicked2');
+                        break;
                     case HC_2:
-                    C1_2.classList.add('clicked2');
-                    C2_2.classList.add('clicked2');
-                    C3_2.classList.add('clicked2');
-                    HC_2.classList.add('clicked2');
-                    break;
+                        C1_2.classList.add('clicked2');
+                        C2_2.classList.add('clicked2');
+                        C3_2.classList.add('clicked2');
+                        HC_2.classList.add('clicked2');
+                        break;
                 }
             } else {
                 button.classList.remove('clicked2');
@@ -785,7 +782,7 @@
         function H1(button) {
             if (!isClicked1) {
                 button.classList.add('clicked1');
-                chui1(button,HC_1);
+                chui1(button, HC_1);
                 document.getElementById('score2').classList.add('flashing');
                 document.getElementById('score1').classList.remove('flashing');
             } else {
@@ -799,7 +796,7 @@
         function H22(button) {
             if (!isClicked2) {
                 button.classList.add('clicked2');
-                chui2(button,HC_2);
+                chui2(button, HC_2);
                 document.getElementById('score1').classList.add('flashing');
                 document.getElementById('score2').classList.remove('flashing');
             } else {
