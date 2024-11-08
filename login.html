@@ -12,7 +12,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-image: url(image/background.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             margin: 0;
         }
 
@@ -62,7 +65,7 @@
             <input type="submit" value="Đăng Nhập">
         </form>
         <p>Chưa có tài khoản, liên hệ Gmail:nguyenviethau.it.2004@gmail.com</p>
-        <th style="color:white; text-align: center; font-size: 30px;">licenses: Nguyễn Việt Hậu</th>
+        <p style="text-align: center; font-size: 30px;">licenses: Nguyễn Việt Hậu</p>
     </div>
 
     <script>
@@ -92,12 +95,12 @@
             const user = users.find(user => user.username === username && user.password === password);
 
             if (user) {
-    sessionStorage.setItem('loggedIn', 'true');
-    sessionStorage.setItem('loginTime', new Date().getTime());
-    window.location.href = 'index.html';
-} else {
-    alert('Tên đăng nhập hoặc mật khẩu không đúng');
-}
+                sessionStorage.setItem('loggedIn', 'true');
+                sessionStorage.setItem('loginTime', new Date().getTime());
+                window.location.href = 'index.html';
+            } else {
+                alert('Tên đăng nhập hoặc mật khẩu không đúng');
+            }
 
 
         }

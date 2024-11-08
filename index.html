@@ -7,28 +7,43 @@
     <title>List Point Panel</title>
     <style>
         body {
+            background-image: url();
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100%;
             width: 100%;
-            background-color: #f0f0f0;
             margin: 0;
         }
 
+        header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            font-size: 100px;
+            color: #333;
+        }
+
         .container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            /* Cho phép các nút xuống hàng */
+            justify-content: center;
+            gap: 20px;
+            /* Khoảng cách giữa các nút */
+            padding: 20px;
             text-align: center;
         }
 
         .button {
-            display: block;
-            width: 1000px;
-            padding: 10px 20px;
-            margin: 10px auto;
-            font-size: 100px;
-            text-align: center;
-            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45%;
+            /* Đặt mỗi nút chiếm khoảng 45% chiều rộng để có 2 nút mỗi hàng */
+            padding: 20px;
+            font-size: 30px;
             color: #fff;
             background-color: #007BFF;
             border-radius: 5px;
@@ -40,31 +55,29 @@
             background-color: #0056b3;
         }
 
-        .name {
-            font-size: 150px;
-        }
-
         .logout-btn {
-            background-color: #f44336;
-            color: white;
-            padding: 10px 20px;
+            width: 100%;
+            padding: 15px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #dc3545;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 20px;
-            margin-top: 20px;
+            transition: background-color 0.3s;
         }
 
         .logout-btn:hover {
-            background-color: #d32f2f;
+            background-color: #c82333;
         }
     </style>
 </head>
 
 <body>
-
+    <header>
+        <h1 class="name">Karate Point Panel</h1>
+    </header>
     <div class="container">
-        <h1 class="name">List Karate Point Panel</h1>
         <div class="button" onclick="redirectTo('KATA.html')">KATA</div>
         <div class="button" onclick="redirectTo('KATA-TEAM.html')">KATA-TEAM</div>
         <div class="button" onclick="redirectTo('KUMITE-1-1m.html')">KUMITE-1m</div>
@@ -75,9 +88,8 @@
         <div class="button" onclick="redirectTo('KUMITE-1-3m.html')">KUMITE-3m</div>
         <div class="button" onclick="redirectTo('KUMITE-2-3m.html')">KUMITE-2-3m</div>
         <button type="button" class="logout-btn" onclick="logout()">Đăng Xuất</button>
-        <div style="color:black; text-align: center; font-size: 30px;">licenses: Nguyễn Viẹt Hậu</div>
     </div>
-
+    <div style="color:black; text-align: center; font-size: 30px;">licenses: Nguyễn Việt Hậu</div>
     <script>
 
         document.addEventListener('keydown', function (e) {
@@ -128,7 +140,7 @@
 
         // Kiểm tra trạng thái đăng nhập và thời gian hết hạn mỗi khi trang được tải
         checkLoginStatus();
-        
+
     </script>
 </body>
 
